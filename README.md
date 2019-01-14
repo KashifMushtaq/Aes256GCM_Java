@@ -2,7 +2,7 @@
 
 ### Cross Platform AES 256 GCM Encryption / Decryption (C#, C++ - Crypto++ & Java)
 
-![C++ Version](https://github.com/KashifMushtaq/AES_GCM_256_C/blob/master/JavaTest.png)
+![Java Version](https://github.com/KashifMushtaq/Aes256GCM_Java/blob/master/JavaTest.png)
 
 ### Introduction
 
