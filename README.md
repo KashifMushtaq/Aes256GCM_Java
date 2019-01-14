@@ -30,7 +30,7 @@ Another purpose of this article is to combine all three major programming langua
 
 You can also read more about Crypto++ AES GCM implementation or algorithm itself here and [here](https://www.cryptopp.com/).
 
-### For Java
+### For Java:
 ### Please add the following JAR to your Java project or class path:
 ### bcprov-jdk15on-160.jar
 Similarly, details about BouncyCastle can be found [here](https://www.bouncycastle.org/java.html).
