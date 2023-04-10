@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 import java.util.Base64;
 import org.bouncycastle.crypto.DataLengthException;
 import org.bouncycastle.crypto.InvalidCipherTextException;
-import org.bouncycastle.crypto.engines.AESFastEngine;
+import org.bouncycastle.crypto.engines.AESEngine;
 import org.bouncycastle.crypto.modes.GCMBlockCipher;
 import org.bouncycastle.crypto.params.AEADParameters;
 import org.bouncycastle.crypto.params.KeyParameter;
@@ -62,7 +62,7 @@ public class AesGcm256 {
         try {
             byte[] plainBytes = PlainText.getBytes("UTF-8");
 
-            GCMBlockCipher cipher = new GCMBlockCipher(new AESFastEngine());
+            GCMBlockCipher cipher = new GCMBlockCipher(new AESEngine());
             AEADParameters parameters = new AEADParameters(new KeyParameter(key), MacBitSize, iv, null);
 
             cipher.init(true, parameters);
@@ -84,7 +84,7 @@ public class AesGcm256 {
         try {
             byte[] encryptedBytes = Base64.getDecoder().decode(EncryptedText);
 
-            GCMBlockCipher cipher = new GCMBlockCipher(new AESFastEngine());
+            GCMBlockCipher cipher = new GCMBlockCipher(new AESEngine());
             AEADParameters parameters = new AEADParameters(new KeyParameter(key), MacBitSize, iv, null);
 
             cipher.init(false, parameters);
